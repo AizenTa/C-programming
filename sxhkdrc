@@ -1,0 +1,65 @@
+super + Return
+	st
+
+super + t
+	st -e tmux new-session -As "work"
+
+super + v
+        st -e nvim
+
+super + d
+	dmenu_run
+
+super + space
+	krunner
+
+super + w
+	$BROWSER
+
+super + shift + w
+	$BROWSER --private-window
+
+super + { equal, minus, BackSpace }
+	$HOME/.scripts/volume.sh { up, down, toggle }
+
+super + shift + { equal, minus }
+	$HOME/.scripts/brightness.sh { up, down }
+
+super + shift + BackSpace 
+	$HOME/.scripts/poweroff.sh
+
+super + m
+	$HOME/.scripts/mount.sh
+
+super + n
+	st -e nnn -Rre
+
+super + f
+	st -e joshub
+
+Print
+        maim -u -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+
+ctrl + Print
+        maim -s | xclip -selection clipboard -t image/png
+
+super + Print
+        $HOME/.scripts/screencast.sh
+
+super + p
+	mpv $(xclip -o)
+
+super + shift + p
+	$HOME/.scripts/youtube.sh
+
+super + s
+        signal-desktop --disable-gpu --enable-features=WebRTCPipeWireCapturer
+
+super + shift + d
+        discord
+
+super + shift + m
+        st -e neomutt
+
+super + grave
+	dunstctl set-paused toggle

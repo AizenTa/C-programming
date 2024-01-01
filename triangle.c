@@ -1,8 +1,6 @@
 #include <stdio.h>
 
-
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
 	int n;
 	printf("enter number : \n");
 	scanf("%d",&n);
@@ -13,5 +11,7 @@ int main(int argc, char const *argv[])
 		}
 		printf("\n");
 	}
+
+	printf("Hello world");
 	return 0;
 }
